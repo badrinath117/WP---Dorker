@@ -14,7 +14,10 @@ def search_and_check_results(query, site_param):
     }
     
     try:
-        search_results = list(search(search_query, num=1, stop=1, pause=2, user_agent=headers))
+        search_results_dict = search(search_query, num=1, stop=1, pause=2, user_agent=headers, extra_params={"num": 10})
+        
+        # Extract search results from the dictionary
+        search_results = [result['link'] for result in search_results_dict]
         
         if search_results:
             print(f"Results found for query '{query}':")

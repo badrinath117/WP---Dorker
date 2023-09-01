@@ -8,7 +8,7 @@ from googlesearch import search
 def search_and_check_results(query, site_param):
     search_query = query + f" site:{site_param}"
     
-    # Add a User-Agent header to mimic a web browser
+    # Add a custom User-Agent header to mimic a web browser
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
     }

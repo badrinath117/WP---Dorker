@@ -1,7 +1,7 @@
 # WP---Dorker
 
 Requirements : 
-pip install googlesearch-python
+pip install googlesearch-python ,
 pip install requests
 
 Usage : 

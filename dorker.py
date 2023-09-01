@@ -14,7 +14,10 @@ def search_and_check_results(query, site_param):
     }
     
     try:
-        search_results_dict = search(search_query, num=1, stop=1, pause=2, user_agent=headers, extra_params={"num": 10})
+        search_results_dict = search(search_query, num=10, stop=10, pause=2, user_agent=headers)
+        
+        # Limit the number of results to 1
+        search_results_dict = search_results_dict[:1]
         
         # Extract search results from the dictionary
         search_results = [result['link'] for result in search_results_dict]
